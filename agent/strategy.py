@@ -190,6 +190,28 @@ def successor_of(server: str, tool: str) -> tuple[str, str] | None:
     return DEPRECATED_SUCCESSORS.get((server, tool))
 
 
+def affordable_mask(server: str, tool: str, fields: tuple[str, ...], credits: int, round_no: int) -> tuple[str, ...] | None:
+    """Keep requested evidence fields when possible; narrow only costly catalog dumps.
+
+    Return None when even the narrowed call cannot fit the remaining duel
+    budget. The reserve is a small allowance for later rounds, not a fixed
+    half-pool floor that would reject all useful late-game calls.
+    """
+    if not _SPECS_AVAILABLE or (server, tool) not in TOOL_SPECS:
+        return fields
+    spec = TOOL_SPECS[(server, tool)]
+    if is_catalog_trap(server, tool, fields):
+        fields = ("name",) if server == "registry" else ("term",)
+    elif fields == ("*",):
+        fields = spec.default_fields
+    reserve = max(0, ROUNDS_PER_DUEL - max(1, round_no)) * 4
+    try:
+        price = _spec_cost(server, tool, fields=fields, n_rows=1)
+    except (KeyError, TypeError, ValueError):
+        return None
+    return fields if price <= credits and credits - price >= reserve else None
+
+
 @dataclass
 class BudgetPacer:
     """Tracks YOUR OWN running spend across a duel and answers one
