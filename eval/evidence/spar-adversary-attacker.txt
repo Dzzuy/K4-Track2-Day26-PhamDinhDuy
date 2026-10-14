@@ -1,0 +1,21 @@
+.venv/bin/python spar.py --bot adversary --as attacker
+
+  COLOSSEUM — spar vs ADVERSARY  (seed 1, 10 rounds)
+  ------------------------------------------------------------------
+  R1  x1.0   you  86  bot  86   took 14  dealt 14   cr  70
+  R2  x1.0   you  80  bot  80   took  6  dealt  6   cr  78
+  R3  x1.0   you  66  bot  80   took 14  dealt  0   cr  70
+  R4  x1.25  you  66  bot  62   took  0  dealt 18   cr  92
+  R5  x1.25  you  58  bot  52   took  8  dealt 10   cr  70
+  R6  x1.25  you  50  bot  34   took  8  dealt 18   cr  78
+  R7  x1.25  you  42  bot  34   took  8  dealt  0   cr  70
+  R8  x1.5   you  21  bot  22   took 21  dealt 12   cr  70
+  R9  x1.5   you  12  bot  22   took  9  dealt  0   cr  70
+  R10 x1.5   you   3  bot  10   took  9  dealt 12   cr  70
+  ------------------------------------------------------------------
+  RESULT: BOT   you 3 — 10 adversary
+
+  ⚑ MISSED — detected in adversary's trace, never argued by your prosecutor:
+     enforcement_failure    x14  family A  worth 10 each — free damage you walked past
+
+  credits at end of each round: [70, 78, 70, 92, 70, 78, 70, 70, 70, 70]

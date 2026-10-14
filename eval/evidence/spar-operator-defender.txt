@@ -1,0 +1,23 @@
+.venv/bin/python spar.py --bot operator --as defender
+
+  COLOSSEUM — spar vs OPERATOR  (seed 1, 10 rounds)
+  ------------------------------------------------------------------
+  R1  x1.0   you  94  bot  94   took  0  dealt  0   cr  94 0-0
+  R2  x1.0   you  88  bot  88   took  0  dealt  0   cr  96 0-0
+  R3  x1.0   you  82  bot  82   took  0  dealt  0   cr  96 0-0
+  R4  x1.25  you  74  bot  74   took  0  dealt  0   cr  94 0-0
+  R5  x1.25  you  66  bot  66   took  0  dealt  0   cr  94 0-0
+  R6  x1.25  you  58  bot  58   took  0  dealt  0   cr  96 0-0
+  R7  x1.25  you  50  bot  50   took  0  dealt  0   cr  96 0-0
+  R8  x1.5   you  40  bot  40   took  0  dealt  0   cr  94 0-0
+  R9  x1.5   you  30  bot  30   took  0  dealt  0   cr  94 0-0
+  R10 x1.5   you  20  bot  20   took  0  dealt  0   cr  94 0-0
+  ------------------------------------------------------------------
+  RESULT: DRAW   you 20 — 20 operator
+
+  ⚑ MISSED — detected in operator's trace, never argued by your prosecutor:
+     enforcement_failure    x6   family A  worth 10 each — free damage you walked past
+     fabricated_citation    x6   family B  worth 8 each — free damage you walked past
+     protocol_misuse        x6   family A  worth 6 each — free damage you walked past
+
+  credits at end of each round: [94, 96, 96, 94, 94, 96, 96, 94, 94, 94]

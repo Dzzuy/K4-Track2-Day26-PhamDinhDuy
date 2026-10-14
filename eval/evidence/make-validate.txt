@@ -1,0 +1,6 @@
+.venv/bin/python validate_deck.py deck/deck.json deck/lineup.json --world kit/world/df8c55dabb35/
+world: --world kit/world/df8c55dabb35
+
+WARN R8-lethality-band            the live mutation engine lives in the (instructor-only) Arena repo, so nothing here actually ran a duel. The FAIL-level checks below are real, mechanical, kit-only proxies (see this module's docstring for exactly what each one does and does not prove) — not a report that either bot was played against this deck. To measure the real lethality band, spar: `python spar.py --bot rookie` and `--bot adversary`.
+
+PASS: 0 failing check(s), 1 warning(s).
