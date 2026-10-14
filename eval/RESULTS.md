@@ -30,6 +30,7 @@ Các file trong `eval/evidence/` là output terminal lưu nguyên từ lệnh t�
 | `make spar BOT=rookie AS=attacker` | hoà 100–100 do prosecutor của Rookie không nộp claim | `evidence/spar-rookie-attacker.txt` |
 | `make spar BOT=rookie AS=defender` | hoà 100–100 | `evidence/spar-rookie-defender.txt` |
 | `make spar BOT=operator AS=defender` | hoà 20–20 | `evidence/spar-operator-defender.txt` |
+| `make ui` | build HTML xong nhưng server từ chối `--open` (Makefile truyền sai option) | `evidence/make-ui-failure.txt` |
 
 ## Danh sách MISSED và giới hạn của phép đấu thử
 
@@ -38,6 +39,7 @@ Các file trong `eval/evidence/` là output terminal lưu nguyên từ lệnh t�
 - `AS=attacker` hoà Rookie 100–100 vì chế độ này dùng prosecutor của Rookie. Deck có thể tạo vi phạm nhưng không có claim thì không gây damage. Bài đấu `AS=all` kiểm tra ba thành phần của đội cùng lúc và thắng Rookie.
 - `AS=attacker` gặp Adversary kết thúc 3–10; kết quả này cho thấy bot cứng vẫn giữ được trận khi chỉ kiểm tra deck, dù nó không phải thước đo độc lập hoàn hảo cho mọi mutation.
 - `spar.py` tự dựng `answer` từ kế hoạch cố định, không gọi `agent/guardrails.py` hoặc nạp `agent/prompt.md`. Vì vậy kết quả local spar chưa chứng minh checkpoint ANSWER không có `UNCITED` trong arena thật. Không sửa `spar.py` vì guide chỉ cho phép đội sửa `agent/`, `deck/`, `eval/`.
+- `make ui` trong repo gọi `kit.arena_ui.serve --open`, nhưng server chỉ nhận `--no-open` và tự mở browser theo mặc định. Để xem replay `spar-rookie-1`, dùng `python -m kit.arena_ui.serve --run spar-rookie-1`. Không sửa Makefile hoặc `kit/` vì nằm ngoài phần đội được phép sửa.
 - Kit không có model để phân xử tám lớp ngữ nghĩa; kết quả precision/recall ở trên chỉ đo fixture có nhãn và trận spar local. Chưa có kết quả giải đấu thật.
 
 Guide không nêu yêu cầu ảnh chụp hoặc điểm bonus cụ thể. Nơi nộp và số thành viên mỗi đội vẫn để `TODO` trong guide; bảng thành viên hiện ghi một người theo thông tin đã cung cấp.

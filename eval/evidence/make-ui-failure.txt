@@ -1,0 +1,7 @@
+.venv/bin/python -m kit.arena_ui.build_ui
+wrote /home/celosia/Tom/VSCode/VinAI/Day26-Colosseum-Agent-Arena-Kit/kit/arena_ui/spar.html (224,143 bytes) — self-contained: PASS (sources + output)
+wrote /home/celosia/Tom/VSCode/VinAI/Day26-Colosseum-Agent-Arena-Kit/kit/arena_ui/projector.html (242,545 bytes) — self-contained: PASS (sources + output)
+.venv/bin/python -m kit.arena_ui.serve --open
+usage: serve.py [-h] [--run RUN] [--port PORT] [--no-open]
+serve.py: error: unrecognized arguments: --open
+make: *** [Makefile:31: ui] Error 2
