@@ -18,6 +18,8 @@ Các file trong `eval/evidence/` là output terminal lưu nguyên từ lệnh t�
 | Kiểm tra | Kết quả | File lưu |
 | --- | --- | --- |
 | `make test` | 4608 passed, 7 skipped | `evidence/make-test.txt` |
+| `.venv/bin/python -m pytest agent/test_gateway_cp1.py -v` | 7 passed | `evidence/cp1-gateway-tests.txt` |
+| `.venv/bin/python -m pytest agent/test_guardrails_cp2.py -v` | 4 passed | `evidence/cp2-guardrails-tests.txt` |
 | `make validate` | 0 FAIL, 1 WARN về giới hạn đo lethality | `evidence/make-validate.txt` |
 | `.venv/bin/python -m eval.prosecute` | precision 1.000, recall 0.529, false claim rate 0 | `evidence/prosecutor-score.txt` |
 | `make spar BOT=rookie AS=all` | thắng 100–0 | `evidence/spar-rookie-all.txt` |

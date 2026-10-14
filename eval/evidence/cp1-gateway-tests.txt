@@ -1,0 +1,16 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0 -- /home/celosia/Tom/VSCode/VinAI/Day26-Colosseum-Agent-Arena-Kit/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/celosia/Tom/VSCode/VinAI/Day26-Colosseum-Agent-Arena-Kit
+configfile: pyproject.toml
+collecting ... collected 7 items
+
+agent/test_gateway_cp1.py::test_cross_learner_denied_even_for_tutor_identity PASSED [ 14%]
+agent/test_gateway_cp1.py::test_write_requires_scope_and_preconditions PASSED [ 28%]
+agent/test_gateway_cp1.py::test_live_lease_required_and_valid_lease_forwarded PASSED [ 42%]
+agent/test_gateway_cp1.py::test_catalog_mask_and_deprecated_tool_rewritten PASSED [ 57%]
+agent/test_gateway_cp1.py::test_a2a_requires_admitted_skill_and_matching_audience PASSED [ 71%]
+agent/test_gateway_cp1.py::test_rate_window_is_respected_across_rounds PASSED [ 85%]
+agent/test_gateway_cp1.py::test_budget_preserves_late_round_calls_and_runs_within_deadline PASSED [100%]
+
+============================== 7 passed in 0.05s ===============================

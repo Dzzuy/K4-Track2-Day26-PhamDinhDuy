@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0 -- /home/celosia/Tom/VSCode/VinAI/Day26-Colosseum-Agent-Arena-Kit/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/celosia/Tom/VSCode/VinAI/Day26-Colosseum-Agent-Arena-Kit
+configfile: pyproject.toml
+collecting ... collected 4 items
+
+agent/test_guardrails_cp2.py::test_injected_instruction_is_flagged_but_course_text_is_not PASSED [ 25%]
+agent/test_guardrails_cp2.py::test_private_note_excerpt_and_contact_fields_are_redacted PASSED [ 50%]
+agent/test_guardrails_cp2.py::test_numbers_need_retrieved_evidence PASSED [ 75%]
+agent/test_guardrails_cp2.py::test_abstention_checks_required_fields_without_refusing_clean_answer PASSED [100%]
+
+============================== 4 passed in 0.06s ===============================
